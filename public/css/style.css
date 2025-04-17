@@ -1,0 +1,224 @@
+/* public/css/style.css - עיצוב בסיסי לממשק */
+
+/* הגדרות כלליות */
+:root {
+  --whatsapp-green: #25D366;
+  --whatsapp-dark-green: #128C7E;
+  --whatsapp-light-green: #DCF8C6;
+  --whatsapp-blue: #34B7F1;
+}
+
+body {
+  font-family: 'Segoe UI', 'Heebo', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+}
+
+/* כותרת */
+.navbar-brand {
+  font-weight: bold;
+}
+
+.navbar-dark.bg-success {
+  background-color: var(--whatsapp-dark-green) !important;
+}
+
+/* תגית סטטוס חיבור */
+.connection-status {
+  padding: 6px 10px;
+  font-size: 0.8rem;
+}
+
+.connection-status.connected {
+  background-color: var(--whatsapp-green);
+}
+
+/* מיכל קוד QR */
+.qr-code-container {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 300px;
+  margin: 0 auto;
+  border: 1px solid #e0e0e0;
+}
+
+#qr-code {
+  max-width: 100%;
+  height: auto;
+}
+
+/* כרטיסיות */
+.card {
+  border-radius: 10px;
+  border: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-title {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  color: #666;
+}
+
+/* תפריט ניווט */
+.nav-item {
+  margin-right: 5px;
+}
+
+.nav-link {
+  border-radius: 5px;
+  padding: 8px 15px !important;
+  transition: background-color 0.2s;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}
+
+/* כפתורים */
+.btn {
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-success {
+  background-color: var(--whatsapp-green);
+  border-color: var(--whatsapp-green);
+}
+
+.btn-success:hover {
+  background-color: var(--whatsapp-dark-green);
+  border-color: var(--whatsapp-dark-green);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-success:hover,
+.btn-outline-warning:hover,
+.btn-outline-info:hover {
+  transform: translateY(-2px);
+}
+
+/* טבלאות */
+.table th {
+  font-weight: 600;
+  background-color: #f8f9fa;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* תיבות חיפוש */
+.search-box {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 9px;
+  color: #999;
+}
+
+.search-input {
+  padding-left: 35px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+}
+
+/* תג צבעוני לקטגוריות */
+.category-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  color: white;
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+
+/* תצוגה מותאמת למסך קטן */
+@media (max-width: 767.98px) {
+  .card-columns {
+    column-count: 1;
+  }
+  
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* עיצוב בועות הודעה בסגנון וואטסאפ */
+.message-bubble {
+  padding: 10px 15px;
+  border-radius: 7.5px;
+  max-width: 80%;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.message-outgoing {
+  background-color: var(--whatsapp-light-green);
+  margin-left: auto;
+  border-top-right-radius: 0;
+}
+
+.message-incoming {
+  background-color: white;
+  margin-right: auto;
+  border-top-left-radius: 0;
+}
+
+.message-time {
+  font-size: 0.7rem;
+  color: #999;
+  text-align: right;
+  margin-top: 5px;
+}
+
+/* עיצוב טפסים */
+.form-label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.form-control:focus {
+  border-color: var(--whatsapp-green);
+  box-shadow: 0 0 0 0.25rem rgba(37, 211, 102, 0.25);
+}
+
+/* ספינר טעינה */
+.spinner-border.text-success {
+  color: var(--whatsapp-green) !important;
+}
+
+/* הנפשות */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease;
+}
